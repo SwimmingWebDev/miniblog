@@ -1,5 +1,6 @@
 /* font */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+
 :root {
   --background-color: #026363;
   --clr-primary: #227b7b;
@@ -13,6 +14,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -64,27 +66,43 @@ ul {
 
 a:hover {
   color: var(--clr-secondary);
+  transition-duration: 0.1s;
 }
 
-/* start navigation */
 .navContents {
   display: flex;
-  align-items: center;
+  gap: 20px;
+  padding: 16px 30px;
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100vw;
+  transition-duration: 0.7s;
 }
 
-.navContents > p {
-  font-size: 1rem;
+.fixedScroll {
+  position: fixed;
+  border-bottom: 2px solid var(--clr-dark);
+  background: black;
+  transition-duration: 0.7s;
+}
+
+.navLeftItems {
+  display: flex;
+  gap: 20px;
 }
 
 nav a {
-  color: var(--clr-light);
+  transition: 0.1s;
 }
 
-.navPartition {
-  padding: 7px;
+nav a:hover {
+  color: var(--clr-dark);
 }
 
-/* navigation end */
+/* End of Navigation */
 
 /* start section:intro  */
 
@@ -300,6 +318,11 @@ footer p {
   body::-webkit-scrollbar {
     display: none;
   }
+
+  .navContents {
+    justify-content: space-between;
+  }
+
   .schoolLink {
     flex-direction: column-reverse;
     padding: 20px;
