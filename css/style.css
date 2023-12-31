@@ -17,6 +17,10 @@
   padding: 0;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -48,7 +52,7 @@ ul {
   width: 97%;
   align-content: center;
   padding-bottom: 15px;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
   border-bottom: solid 5px;
 }
 
@@ -99,7 +103,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--clr-dark);
+  color: var(--clr-secondary);
 }
 
 /* End of Navigation */
@@ -299,7 +303,7 @@ nav a:hover {
 
 /* start footer */
 footer {
-  width: 85%;
+  margin-bottom: 30px;
 }
 
 footer p {
@@ -315,10 +319,6 @@ footer p {
 
 /* responsive design */
 @media (max-width: 768px) {
-  body::-webkit-scrollbar {
-    display: none;
-  }
-
   .navContents {
     justify-content: space-between;
   }
